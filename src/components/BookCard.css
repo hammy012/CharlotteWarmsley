@@ -1,0 +1,146 @@
+.book-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease;
+}
+
+.book-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.book-card-image-container {
+  background-color: var(--color-cream-dark);
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+}
+
+.book-card-cover-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  box-shadow: 0 8px 24px rgba(27, 38, 59, 0.12);
+  border-radius: 2px 6px 6px 2px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.book-card:hover .book-card-cover-img {
+  transform: scale(1.03);
+}
+
+/* Simulated book cover textures */
+.book-card-spine {
+  position: absolute;
+  top: calc(50% - 110px); /* adjust to match image size roughly */
+  left: calc(50% - 75px); /* approximate left edge of standard covers */
+  width: 10px;
+  height: 220px;
+  /* fallback styling if not matching exactly */
+  display: none;
+}
+
+.book-card-rating-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #ffffff;
+  color: var(--color-navy);
+  padding: 0.35rem 0.7rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  z-index: 10;
+}
+
+.star-icon {
+  margin-bottom: 1px;
+}
+
+.book-card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.book-card-meta {
+  margin-bottom: 0.5rem;
+}
+
+.book-card-format {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+}
+
+.book-card-title {
+  font-size: 1.45rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+  color: var(--color-navy);
+}
+
+.book-card-description {
+  font-size: 0.95rem;
+  color: var(--color-navy-light);
+  line-height: 1.55;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.book-card-themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.theme-badge {
+  background-color: var(--color-sky-blue);
+  color: var(--color-navy-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.book-card-cta {
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover .arrow-icon {
+  transform: translate(2px, -2px);
+}
+
+/* Adjustments for different formats */
+@media (max-width: 768px) {
+  .book-card-image-container {
+    height: 280px;
+  }
+  .book-card-content {
+    padding: 1.5rem;
+  }
+}

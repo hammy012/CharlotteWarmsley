@@ -1,0 +1,42 @@
+.books-section {
+  background-color: var(--color-cream);
+  border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 10;
+}
+
+.section-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-sky-blue-dark);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
