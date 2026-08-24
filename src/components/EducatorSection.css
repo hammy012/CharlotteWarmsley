@@ -1,0 +1,135 @@
+.educators-section {
+  background-color: var(--color-cream-dark);
+  border-bottom: 1px solid var(--border);
+}
+
+.educators-container {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* Text Column */
+.educators-text-column {
+  flex: 1.1;
+  text-align: left;
+}
+
+.educators-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-sky-blue-dark);
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.educators-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.educators-description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-navy-light);
+  margin-bottom: 2.5rem;
+}
+
+.educators-cta-wrapper {
+  display: flex;
+}
+
+/* Features Column */
+.educators-features-column {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.educator-feature-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.educator-feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.edu-icon-container {
+  background-color: var(--color-sky-blue);
+  color: var(--color-navy-light);
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edu-item-icon {
+  stroke-width: 2px;
+}
+
+.edu-content-container {
+  text-align: left;
+}
+
+.edu-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-navy);
+}
+
+.edu-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-navy-light);
+}
+
+/* Responsive configurations */
+@media (max-width: 1024px) {
+  .educators-container {
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+  
+  .educators-text-column {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .educators-cta-wrapper {
+    justify-content: center;
+  }
+  
+  .educators-features-column {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .educators-title {
+    font-size: 2.2rem;
+  }
+  .educators-description {
+    font-size: 1.05rem;
+  }
+  .educator-feature-card {
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+}
