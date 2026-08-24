@@ -1,0 +1,118 @@
+.matter-section {
+  background-color: var(--color-gold-light);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 6.5rem 0;
+  text-align: center;
+}
+
+.matter-header {
+  max-width: 750px;
+  margin: 0 auto 5rem auto;
+}
+
+.matter-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  color: var(--color-navy);
+}
+
+.matter-sub {
+  font-size: 1.25rem;
+  color: var(--color-navy-light);
+  line-height: 1.6;
+}
+
+.statements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem;
+}
+
+.statement-card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.stmt-index {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-sky-blue-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.stmt-title {
+  font-size: 3.2rem;
+  font-family: var(--font-serif);
+  font-weight: 900;
+  color: var(--color-navy);
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.stmt-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-gold-hover);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+}
+
+.stmt-desc {
+  font-size: 1.05rem;
+  color: var(--color-navy-light);
+  line-height: 1.5;
+  max-width: 260px;
+}
+
+/* Add dividers between statement cards on desktop */
+@media (min-width: 901px) {
+  .statement-card:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -1.75rem;
+    top: 25%;
+    width: 1px;
+    height: 50%;
+    background-color: rgba(27, 38, 59, 0.12);
+  }
+}
+
+/* Responsive configurations */
+@media (max-width: 900px) {
+  .statements-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .statement-card:not(:last-child) {
+    border-bottom: 1px solid rgba(27, 38, 59, 0.08);
+    padding-bottom: 3rem;
+  }
+  .matter-header h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .matter-section {
+    padding: 4.5rem 0;
+  }
+  .matter-header h2 {
+    font-size: 2rem;
+  }
+  .stmt-title {
+    font-size: 2.6rem;
+  }
+}
