@@ -1,0 +1,265 @@
+.hero-section {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  background-color: var(--color-cream);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  z-index: 5;
+}
+
+/* Text Column */
+.hero-text-column {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+
+.text-highlight {
+  color: var(--color-gold);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: var(--color-navy-light);
+  margin-bottom: 2.5rem;
+  max-width: 550px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+  background-color: var(--color-gold);
+  color: #fff;
+}
+
+.btn-hero-secondary {
+  border-color: rgba(27, 38, 59, 0.15);
+  background-color: rgba(27, 38, 59, 0.02);
+}
+
+/* Visual Book Column */
+.hero-visual-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-composition {
+  position: relative;
+  width: 420px;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-stack-item {
+  position: absolute;
+  border-radius: 4px 10px 10px 4px;
+  box-shadow: 0 10px 30px rgba(27, 38, 59, 0.15);
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+/* 3D Stack Layering */
+.book-snowman {
+  width: 250px;
+  height: 330px;
+  z-index: 10;
+  transform: translate(0, 0) rotate(1deg);
+  box-shadow: 0 15px 40px rgba(27, 38, 59, 0.22);
+}
+
+.book-foloppy {
+  width: 210px;
+  height: 290px;
+  z-index: 5;
+  transform: translate(110px, 10px) rotate(10deg);
+  opacity: 0.95;
+}
+
+.book-peek {
+  width: 210px;
+  height: 290px;
+  z-index: 5;
+  transform: translate(-110px, 15px) rotate(-10deg);
+  opacity: 0.95;
+}
+
+/* Floating Decorations */
+.hero-decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.decor-cloud {
+  position: absolute;
+  opacity: 0.15;
+}
+
+.svg-cloud {
+  color: var(--color-navy);
+}
+
+.decor-cloud-1 {
+  top: 15%;
+  left: 8%;
+}
+
+.decor-cloud-2 {
+  top: 25%;
+  right: 12%;
+}
+
+.decor-star {
+  position: absolute;
+}
+
+.star-1 {
+  top: 18%;
+  left: 45%;
+}
+
+.star-2 {
+  bottom: 25%;
+  left: 12%;
+}
+
+.star-3 {
+  bottom: 20%;
+  right: 48%;
+}
+
+/* Responsive configurations */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .hero-text-column {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-description {
+    margin-bottom: 2rem;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+  }
+  
+  .book-composition {
+    width: 380px;
+    height: 400px;
+  }
+  
+  .book-snowman {
+    width: 210px;
+    height: 280px;
+  }
+  
+  .book-foloppy {
+    width: 180px;
+    height: 250px;
+    transform: translate(90px, 10px) rotate(10deg);
+  }
+  
+  .book-peek {
+    width: 180px;
+    height: 250px;
+    transform: translate(-90px, 15px) rotate(-10deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: 110px;
+    padding-bottom: 50px;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-description {
+    font-size: 1.05rem;
+  }
+  
+  .book-composition {
+    width: 280px;
+    height: 320px;
+  }
+  
+  .book-snowman {
+    width: 170px;
+    height: 230px;
+  }
+  
+  .book-foloppy {
+    width: 140px;
+    height: 190px;
+    transform: translate(65px, 10px) rotate(10deg);
+  }
+  
+  .book-peek {
+    width: 140px;
+    height: 190px;
+    transform: translate(-65px, 15px) rotate(-10deg);
+  }
+  
+  .decor-cloud-1, .decor-cloud-2 {
+    display: none;
+  }
+}
